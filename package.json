@@ -1,5 +1,5 @@
 {
-  "name": "nw-builder",
+  "name": "@kitsune7/nw-builder",
   "version": "3.5.8",
   "description": "nw-builder",
   "main": "index.js",
@@ -12,6 +12,9 @@
   },
   "bin": {
     "nwbuild": "./bin/nwbuild"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "author": {
     "name": "Steffen Müller"
