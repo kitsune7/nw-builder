@@ -1,6 +1,4 @@
-# nw-builder [![NPM version][npm-image]][npm-url] [![Dependency Status][depstat-image]][depstat-url] [![Join the chat at https://gitter.im/nwjs/nw-builder](https://badges.gitter.im/nwjs/nw-builder.svg)](https://gitter.im/nwjs/nw-builder?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![NPM](https://nodei.co/npm/nw-builder.png?downloads=true)](https://nodei.co/npm/nw-builder/)
+# nw-builder
 
 > Build your [NW.js](https://github.com/nwjs/nw.js) apps for Mac, Win and Linux programmatically or via CLI.
 
@@ -288,7 +286,7 @@ Additionally, when specifying multiple version of the same platform such as "win
 
 See [#85](https://github.com/nwjs/nw-builder/issues/85) and [#94](https://github.com/nwjs/nw-builder/pull/94) for more information. If you need this during development too, see [platform-overrides](https://github.com/adam-lynch/platform-overrides) and [gulp-platform-overrides](https://github.com/adam-lynch/gulp-platform-overrides). There is no Grunt plugin, [yet](https://github.com/new).
 
-## Troubleshooting
+## Troubleshooting
 
 ### OSX ulimit
 
@@ -300,8 +298,7 @@ To get around it, run `ulimit -n 1024` (or add it to your `~/.bash_profile`). Fo
 
 **Current**
 
-- Adam Lynch ([@adam-lynch](https://github.com/adam-lynch))
-- Rémy Boulanouar ([@DblK](https://github.com/DblK))
+- Christopher Bradshaw ([@kitsune7](https://github.com/kitsune7))
 - You? :smile:. We're open to contributions (to the code, documentation, or anything else) and or additional maintainers.
 
 **Past**
@@ -309,6 +306,8 @@ To get around it, run `ulimit -n 1024` (or add it to your `~/.bash_profile`). Fo
 - Steffen Müller ([@steffenmllr](https://github.com/steffenmllr)) (Creator)
 - Gabe Paez ([@gabepaez](https://github.com/gabepaez))
 - Andy Trevorah ([@trevorah](https://github.com/trevorah))
+- Adam Lynch ([@adam-lynch](https://github.com/adam-lynch))
+- Rémy Boulanouar ([@DblK](https://github.com/DblK))
 
 ## Contributing
 
@@ -316,17 +315,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Release History
 
-See [CHANGELOG.md](CHANGELOG.md) or [Releases](https://github.com/nwjs-community/nw-builder/blob/develop/releases).
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
 [MIT License](https://en.wikipedia.org/wiki/MIT_License)
-
-[npm-url]: https://www.npmjs.com/package/nw-builder
-[npm-image]: https://img.shields.io/npm/v/nw-builder.svg?style=flat
-
-[travis-url]: https://travis-ci.org/nwjs/nw-builder
-[travis-image]: https://img.shields.io/travis/nwjs/nw-builder/master.svg?style=flat
-
-[depstat-url]: https://david-dm.org/nwjs/nw-builder
-[depstat-image]: https://david-dm.org/nwjs/nw-builder.svg?style=flat
