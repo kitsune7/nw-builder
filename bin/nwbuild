@@ -1,61 +1,51 @@
 #!/usr/bin/env node
-var optimist = require('optimist');
-var updateNotifier = require('update-notifier');
 var NwBuilder = require('./../lib');
 var path = require('path');
 var detectCurrentPlatform = require('../lib/detectCurrentPlatform.js');
 
-var argv = optimist
-    .usage('Usage: nwbuild [options] [path]')
+var argv = require('yargs')
+  .command('$0 <path>')
 
-    .alias('p', 'platforms')
-    .describe('p', 'Platforms to build, comma-sperated, can be: win32,win64,osx32,osx64,linux32,linux64')
+  .alias('p', 'platforms')
+  .describe('p', 'Platforms to build, comma-sperated, can be: win32,win64,osx32,osx64,linux32,linux64')
 
-    .alias('v', 'version')
-    .default('v', 'latest')
-    .describe('v', 'The nw version, eg. 0.8.4')
+  .version(false)
+  .alias('v', 'version')
+  .default('v', 'latest')
+  .describe('v', 'The nw version, eg. 0.8.4')
 
-    .alias('r', 'run')
-    .default('r', false)
-    .describe('r', 'Runs NW.js for the current platform')
-    .boolean('r')
+  .alias('r', 'run')
+  .default('r', false)
+  .describe('r', 'Runs NW.js for the current platform')
+  .boolean('r')
 
-    .alias('o', 'buildDir')
-    .default('o', './build')
-    .describe('o', 'The build folder')
+  .alias('o', 'buildDir')
+  .default('o', './build')
+  .describe('o', 'The build folder')
 
-    .alias('f', 'forceDownload')
-    .default('f', false)
-    .describe('f', 'Force download of NW.js')
-    .boolean('f')
+  .alias('f', 'forceDownload')
+  .default('f', false)
+  .describe('f', 'Force download of NW.js')
+  .boolean('f')
 
-    .alias('n', 'name')
-    .describe('n', 'The Name of your NW.js app.')
+  .alias('n', 'name')
+  .describe('n', 'The Name of your NW.js app.')
 
-    .describe('cacheDir', 'The cache folder')
+  .describe('cacheDir', 'The cache folder')
 
-    .default('quiet', false)
-    .describe('quiet', 'Disables logging')
-    .boolean('quiet')
+  .default('quiet', false)
+  .describe('quiet', 'Disables logging')
+  .boolean('quiet')
 
-    .argv;
+  // Howto Help
+  .help('h')
+  .alias('h', 'help')
 
-// Howto Help
-if (argv.h || argv.help) {
-    optimist.showHelp();
-    process.exit(0);
-}
-
-// Error if there are no files
-var files = argv._[0];
-if(!files) {
-    optimist.showHelp();
-    process.exit(1);
-}
+  .argv;
 
 var options = {
     appName: argv.name,
-    files: path.resolve(process.cwd(), files) + '/**/*',
+    files: path.resolve(process.cwd(), argv.path) + '/**/*',
     flavor: argv.flavor || 'sdk',
     platforms: argv.platforms ? argv.platforms.split(',') : null,
     version: argv.version,
