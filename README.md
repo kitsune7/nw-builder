@@ -1,4 +1,4 @@
-# nw-builder
+# nw-builder [![NPM Version][npm-image]][npm-url]
 
 > Build your [NW.js](https://github.com/nwjs/nw.js) apps for Mac, Win and Linux programmatically or via CLI.
 
@@ -320,3 +320,6 @@ See [CHANGELOG.md](CHANGELOG.md).
 ## License
 
 [MIT License](https://en.wikipedia.org/wiki/MIT_License)
+
+[npm-url]: https://npmjs.org/package/@happikitsune/nw-builder
+[npm-image]: https://img.shields.io/npm/v/@happikitsune/nw-builder
