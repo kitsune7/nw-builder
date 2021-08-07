@@ -1,6 +1,6 @@
 {
   "name": "@kitsune7/nw-builder",
-  "version": "3.5.8",
+  "version": "3.5.9",
   "description": "nw-builder",
   "main": "index.js",
   "scripts": {
