@@ -13,9 +13,6 @@
   "bin": {
     "nwbuild": "./bin/nwbuild"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "author": {
     "name": "Steffen Müller"
   },
